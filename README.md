@@ -2,7 +2,6 @@
 
 A modern, fully functional e-commerce website built with **HTML, CSS, and vanilla JavaScript**. It includes a dynamic landing page, shop with filtering and sorting, product details modal, persistent shopping cart, checkout flow, contact form, about page, and more. All data is stored locally in the browser's `localStorage` for cart persistence.
 
-![ShopVerse Screenshot](https://via.placeholder.com/800x400?text=ShopVerse+Preview)
 
 ## ✨ Features
 
