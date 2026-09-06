@@ -1,1 +1,1 @@
-# ShopVerse---Modern-E-Commerce
+# ShopVerse-Modern-E-Commerce
