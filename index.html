@@ -1,1 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopVerse - Premium E-Commerce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="logo" onclick="navigateTo('home')">
+                <span class="logo-icon">🛍️</span> Shop<span>Verse</span>
+            </a>
+            <ul class="nav-links">
+                <li><a class="active" data-page="home" onclick="navigateTo('home')">Home</a></li>
+                <li><a data-page="shop" onclick="navigateTo('shop')">Shop</a></li>
+                <li><a data-page="about" onclick="navigateTo('about')">About</a></li>
+                <li><a data-page="contact" onclick="navigateTo('contact')">Contact</a></li>
+                <li>
+                    <button class="cart-icon" onclick="navigateTo('cart')" title="View Cart">
+                        🛒 <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                </li>
+            </ul>
+            <button class="hamburger" id="hamburgerBtn" onclick="toggleMobileNav()">☰</button>
+        </div>
+        <div class="mobile-nav" id="mobileNav">
+            <a class="active" data-page="home" onclick="navigateTo('home'); toggleMobileNav();">🏠 Home</a>
+            <a data-page="shop" onclick="navigateTo('shop'); toggleMobileNav();">🛍️ Shop</a>
+            <a data-page="about" onclick="navigateTo('about'); toggleMobileNav();">ℹ️ About</a>
+            <a data-page="contact" onclick="navigateTo('contact'); toggleMobileNav();">📞 Contact</a>
+            <a data-page="cart" onclick="navigateTo('cart'); toggleMobileNav();">🛒 Cart (<span id="mobileCartCount">0</span>)</a>
+        </div>
+    </nav>
 
+    <!-- Main Content Container -->
+    <main class="main-content" id="mainContent">
+        <!-- Dynamic pages will be rendered here -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🛍️ ShopVerse</h3>
+                <p>Your trusted destination for quality products at unbeatable prices.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a onclick="navigateTo('home')">Home</a></li>
+                    <li><a onclick="navigateTo('shop')">Shop</a></li>
+                    <li><a onclick="navigateTo('about')">About Us</a></li>
+                    <li><a onclick="navigateTo('contact')">Contact</a></li>
+                    <li><a onclick="navigateTo('cart')">Cart</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Categories</h3>
+                <ul>
+                    <li><a onclick="navigateTo('shop'); setFilter('electronics')">Electronics</a></li>
+                    <li><a onclick="navigateTo('shop'); setFilter('fashion')">Fashion</a></li>
+                    <li><a onclick="navigateTo('shop'); setFilter('accessories')">Accessories</a></li>
+                    <li><a onclick="navigateTo('shop'); setFilter('home')">Home & Living</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a>Shipping Policy</a></li>
+                    <li><a>Return Policy</a></li>
+                    <li><a>FAQ</a></li>
+                    <li><a>Track Order</a></li>
+                    <li><a>Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ShopVerse. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal-overlay hidden" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProductModal()">✕</button>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
